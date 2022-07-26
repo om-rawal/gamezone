@@ -1,8 +1,9 @@
 import React from "react";
-export default function Videopage() {
+export default function VideoPage() {
     return(
-        <>
-        <h1>THis is videopage</h1>
-        </>
+        <div>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide"></link>
+            <h1>This is video page</h1>
+        </div>
     );
 }

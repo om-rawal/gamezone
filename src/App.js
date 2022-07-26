@@ -1,13 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
-import Homepage from './homepage';
+import Homepage from './HomePage';
 
-function App() {
-  return (
-    <div>
-      <Homepage></Homepage>
-    </div>
-  );
-}
+// function App() {
+//   return (
+//     <div>
+//       <Homepage></Homepage>
+//     </div>
+//   );
+// }
 
-export default App;
+// export default App;

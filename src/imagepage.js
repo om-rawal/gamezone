@@ -1,9 +1,9 @@
 import React from "react";
-
-export default function Imagepage() {
+export default function ImagePage() {
     return(
-        <>
-        <h1>THis is imagepage</h1>
-        </>
+        <div>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide"></link>
+            <h1>This is image page</h1>
+        </div>
     );
 }
