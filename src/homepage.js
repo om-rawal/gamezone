@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, ListGroup, Row } from "react-bootstrap";
+import { ListGroup} from "react-bootstrap";
 import Carousel from 'react-bootstrap/Carousel';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
@@ -18,12 +18,12 @@ class HomePage extends React.Component {
         var puzzle = ['Sudoku', 'Minesweeper', 'Chess'];
         var racing = ['Need For Speed', 'Asphalt', 'Froza'];
         var shooting = ['CS: GO', 'Call of Duty', 'PUBG']
-        if (selectedGenre == 'action') this.setState({ finalList: action });
-        else if (selectedGenre == 'adventure') this.setState({ finalList: adventure });
-        else if (selectedGenre == 'arcade') this.setState({ finalList: arcade });
-        else if (selectedGenre == 'puzzle') this.setState({ finalList: puzzle });
-        else if (selectedGenre == 'racing') this.setState({ finalList: racing });
-        else if (selectedGenre == 'shooting') this.setState({ finalList: shooting });
+        if (selectedGenre === 'action') this.setState({ finalList: action });
+        else if (selectedGenre === 'adventure') this.setState({ finalList: adventure });
+        else if (selectedGenre === 'arcade') this.setState({ finalList: arcade });
+        else if (selectedGenre === 'puzzle') this.setState({ finalList: puzzle });
+        else if (selectedGenre === 'racing') this.setState({ finalList: racing });
+        else if (selectedGenre === 'shooting') this.setState({ finalList: shooting });
         else this.setState({ finalList: undefined });
         console.log(this.state.finalList);
         this.setState({items : this.state.finalList.map((word, idx) => {
