@@ -7,8 +7,32 @@ class HomePage extends React.Component {
     constructor() {
         super();
         this.state = { finalList:['GTA V', 'CS: GO', 'Call of Duty'],
-                        items:null,                    
+                        items:null,
+                        // carList:[['https://i.ibb.co/FXvtDNM/Wallpaper-Dog-10873456.jpg',
+                        //         'https://store.steampowered.com/app/730/CounterStrike_Global_Offensive/',
+                        //         'CS:GO',
+                        //         'This is a First-Person Shooter Game'
+                        //         ],
+                        //         ['https://i.ibb.co/1sYP5JB/Wallpaper-Dog-20488894.jpg',
+                        //         'https://www.rockstargames.com/gta-v',
+                        //         'GTA V',
+                        //         'This is an Action-Adventure Game'
+                        //         ],
+                        //         ['https://images6.alphacoders.com/601/601245.png',
+                        //         'https://store.steampowered.com/app/1262560/Need_for_Speed_Most_Wanted/',
+                        //         'NFS Most Wanted',
+                        //         'This is a Racing Game'
+                        //         ],
+                        //         ['https://mcdn.wallpapersafari.com/medium/81/7/k57F8m.jpg',
+                        //         'https://www.callofduty.com/',
+                        //         'Call Of Duty',
+                        //         'This is a Action Game Realted to Battle'
+                        //         ],
+                        //     ],
+                        // dummy:null,
+
     }
+    
     }
     genreSelected(selectedGenre) {
         console.log('hit on genre selection');
@@ -30,59 +54,81 @@ class HomePage extends React.Component {
             return <ListGroup.Item style={{'width':'30%'}} variant="success"key={idx}>{word}</ListGroup.Item>
         })});
     };
+
+    // trigger(){
+    //     this.setState({dummy : this.state.carList.map((word, idx) => {
+    //         console.log("w->"+typeof (word[0])+" idx->"+idx)
+    //         return<Carousel.Item key={idx} style={{ 'height': "600", 'width': '90%',"padding-left": "15%", }}>
+    //         <img style={{ 'height': "600", 'width': '90%' }}
+    //             src={word[0]}
+    //             alt="First Slide" >
+    //         </img>
+    //         <Carousel.Caption key={idx} style={{"padding-left": "15%",}} >
+    //             <a href={word[1]}>
+    //                 <h3>Hello{word[2]}</h3>
+    //             </a>
+    //             <p>{word[3]}</p>
+    //         </Carousel.Caption>
+    //     </Carousel.Item>
+    //         // <ListGroup.Item style={{'width':'30%'}} variant="success"key={idx}>{word}</ListGroup.Item>
+    //     })})
+    // }
+
+
+
     render() {
         return (
             <div>
                 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide"></link>
                 <h1>Welcome to GameZone</h1>
                 <hr />
-                <Carousel fade autoPlay={true} interval={3000} >
-                    <Carousel.Item style={{ 'height': "600px", 'width': '1600px', 'maxWidth': '1600px' }}>
-                        <img style={{ 'height': "600px", 'width': '1600px', 'maxWidth': '1600px' }}
+                <Carousel fade autoPlay={true} interval={3000}>
+                    <Carousel.Item style={{ 'height': "600", 'width': '90%',"padding-left": "15%", }}>
+                        <img style={{ 'height': "600", 'width': '90%' }}
                             src="https://i.ibb.co/FXvtDNM/Wallpaper-Dog-10873456.jpg"
                             alt="First Slide" >
                         </img>
-                        <Carousel.Caption >
+                        <Carousel.Caption style={{"padding-left": "15%",}} >
                             <a href="https://store.steampowered.com/app/730/CounterStrike_Global_Offensive/">
                                 <h3>CS:GO</h3>
                             </a>
                             <p>This is a First-Person Shooter Game</p>
                         </Carousel.Caption>
                     </Carousel.Item>
-                    <Carousel.Item style={{ 'height': "600px", 'width': '1600px', 'maxWidth': '1600px' }}>
-                        <img style={{ 'height': "600px", 'width': '1600px', 'maxWidth': '1600px' }}
+                    <Carousel.Item style={{ 'height': "600", 'width': '90%',"padding-left": "15%", }}>
+                        <img style={{ 'height': "600", 'width': '90%' }}
                             src="https://i.ibb.co/1sYP5JB/Wallpaper-Dog-20488894.jpg"
                             alt="First Slide" >
                         </img>
-                        <Carousel.Caption>
+                        <Carousel.Caption style={{"padding-left": "15%",}}>
                             <a href="https://www.rockstargames.com/gta-v">
                                 <h3 class='backGround' >GTA V</h3>
                             </a>
                             <p class='backGround'>This is an Action-Adventure Game</p>
                         </Carousel.Caption>
                     </Carousel.Item>
-                    <Carousel.Item style={{ 'height': "600px", 'width': '1600px', 'maxWidth': '1600px' }}>
-                        <img style={{ 'height': "600px", 'width': '1540px', 'maxWidth': '1540px' }}
+                    <Carousel.Item style={{ 'height': "600", 'width': '90%',"padding-left": "15%", }}>
+                        <img style={{ 'height': "600", 'width': '90%' }}
                             src="https://images6.alphacoders.com/601/601245.png"
                             alt="First Slide" >
                         </img>
-                        <Carousel.Caption>
+                        <Carousel.Caption style={{"padding-left": "15%",}}>
                             <a href="https://store.steampowered.com/app/1262560/Need_for_Speed_Most_Wanted/">
                                 <h3>NFS Most Wanted</h3>
                             </a>
                             <p>This is a Racing Game</p>
                         </Carousel.Caption>
                     </Carousel.Item>
-                    <Carousel.Item style={{ 'height': "600px", 'width': '1600px', 'maxWidth': '1600px' }}>
-                        <img style={{ 'height': "600px", 'width': '1540px', 'maxWidth': '1540px' }}
-                            src="https://images2.alphacoders.com/597/597965.jpg"
+                    <Carousel.Item style={{ 'height': "600", 'width': '90%',"padding-left": "15%", }}>
+                        <img style={{ 'height': "600", 'width': '90%' }}
+                            src="https://mcdn.wallpapersafari.com/medium/81/7/k57F8m.jpg"
                             alt="First Slide" >
                         </img>
-                        <Carousel.Caption>
+                        <Carousel.Caption style={{"padding-left": "15%",}}>
                             <a href="https://www.callofduty.com/">
                                 <h3>Call Of Duty</h3>
                             </a>
-                            <p>This is a Action Game Realted to Battle </p>
+                            <p>This is a Action Game Realted to Battle</p>
                         </Carousel.Caption>
                     </Carousel.Item>
 
