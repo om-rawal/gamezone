@@ -13,10 +13,10 @@ class HomePage extends React.Component {
     genreSelected(selectedGenre) {
         console.log('hit on genre selection');
         var action = ['GTA V', 'CS: GO', 'Call of Duty'];
-        var adventure = ['GTA V', 'CS: GO', 'Call of Duty', 'Minecraft'];
-        var arcade = ['Space Invadors', 'Packman', 'Donkey Kong'];
+        var adventure = ['GTA V', 'Minecraft'];
+        var arcade = ['Space Invaders', 'Packman', 'Donkey Kong'];
         var puzzle = ['Sudoku', 'Minesweeper', 'Chess'];
-        var racing = ['Need For Speed', 'Asphalt', 'Froza'];
+        var racing = ['Need For Speed', 'Asphalt', 'Forza'];
         var shooting = ['CS: GO', 'Call of Duty', 'PUBG']
         if (selectedGenre === 'action') this.setState({ finalList: action });
         else if (selectedGenre === 'adventure') this.setState({ finalList: adventure });

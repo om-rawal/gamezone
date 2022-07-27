@@ -56,27 +56,27 @@ const routing=(
   <MDBFooter className='text-center' color='white' bgColor='dark'>
   <MDBContainer className='p-4'>
     <section className='mb-4'>
-      <a className='btn btn-outline-light btn-floating m-1' href='#!' role='button'>
+      <a className='btn btn-outline-light btn-floating m-1' href='https://www.facebook.com/' role='button'>
         <MDBIcon fab icon='facebook-f' />
       </a>
 
-      <a className='btn btn-outline-light btn-floating m-1' href='#!' role='button'>
+      <a className='btn btn-outline-light btn-floating m-1' href='https://twitter.com/' role='button'>
         <MDBIcon fab icon='twitter' />
       </a>
 
-      <a className='btn btn-outline-light btn-floating m-1' href='#!' role='button'>
+      <a className='btn btn-outline-light btn-floating m-1' href='https://www.google.co.in/' role='button'>
         <MDBIcon fab icon='google' />
       </a>
 
-      <a className='btn btn-outline-light btn-floating m-1' href='#!' role='button'>
+      <a className='btn btn-outline-light btn-floating m-1' href='https://www.instagram.com/' role='button'>
         <MDBIcon fab icon='instagram' />
       </a>
 
-      <a className='btn btn-outline-light btn-floating m-1' href='#!' role='button'>
+      <a className='btn btn-outline-light btn-floating m-1' href='https://in.linkedin.com/in/om-rawal' role='button'>
         <MDBIcon fab icon='linkedin-in' />
       </a>
 
-      <a className='btn btn-outline-light btn-floating m-1' href='#!' role='button'>
+      <a className='btn btn-outline-light btn-floating m-1' href='https://github.com/om-rawal' role='button'>
         <MDBIcon fab icon='github' />
       </a>
     </section>
