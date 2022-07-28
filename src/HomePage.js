@@ -8,29 +8,6 @@ class HomePage extends React.Component {
         super();
         this.state = { finalList:['GTA V', 'CS: GO', 'Call of Duty'],
                         items:null,
-                        // carList:[['https://i.ibb.co/FXvtDNM/Wallpaper-Dog-10873456.jpg',
-                        //         'https://store.steampowered.com/app/730/CounterStrike_Global_Offensive/',
-                        //         'CS:GO',
-                        //         'This is a First-Person Shooter Game'
-                        //         ],
-                        //         ['https://i.ibb.co/1sYP5JB/Wallpaper-Dog-20488894.jpg',
-                        //         'https://www.rockstargames.com/gta-v',
-                        //         'GTA V',
-                        //         'This is an Action-Adventure Game'
-                        //         ],
-                        //         ['https://images6.alphacoders.com/601/601245.png',
-                        //         'https://store.steampowered.com/app/1262560/Need_for_Speed_Most_Wanted/',
-                        //         'NFS Most Wanted',
-                        //         'This is a Racing Game'
-                        //         ],
-                        //         ['https://mcdn.wallpapersafari.com/medium/81/7/k57F8m.jpg',
-                        //         'https://www.callofduty.com/',
-                        //         'Call Of Duty',
-                        //         'This is a Action Game Realted to Battle'
-                        //         ],
-                        //     ],
-                        // dummy:null,
-
     }
     
     }
@@ -54,27 +31,6 @@ class HomePage extends React.Component {
             return <ListGroup.Item style={{'width':'30%'}} variant="success"key={idx}>{word}</ListGroup.Item>
         })});
     };
-
-    // trigger(){
-    //     this.setState({dummy : this.state.carList.map((word, idx) => {
-    //         console.log("w->"+typeof (word[0])+" idx->"+idx)
-    //         return<Carousel.Item key={idx} style={{ 'height': "600", 'width': '90%',"padding-left": "15%", }}>
-    //         <img style={{ 'height': "600", 'width': '90%' }}
-    //             src={word[0]}
-    //             alt="First Slide" >
-    //         </img>
-    //         <Carousel.Caption key={idx} style={{"padding-left": "15%",}} >
-    //             <a href={word[1]}>
-    //                 <h3>Hello{word[2]}</h3>
-    //             </a>
-    //             <p>{word[3]}</p>
-    //         </Carousel.Caption>
-    //     </Carousel.Item>
-    //         // <ListGroup.Item style={{'width':'30%'}} variant="success"key={idx}>{word}</ListGroup.Item>
-    //     })})
-    // }
-
-
 
     render() {
         return (

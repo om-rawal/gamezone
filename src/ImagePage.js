@@ -1,5 +1,5 @@
 import { MDBRow, MDBCol } from "mdb-react-ui-kit";
-import React from "react";
+import React,{useState} from "react";
 import Figure from 'react-bootstrap/Figure'
 export default function ImagePage() {
     return (
@@ -7,6 +7,7 @@ export default function ImagePage() {
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide"></link>
             <h1>Imges of Popular Games</h1>
             <div class="padThis">
+
                 <MDBRow>
                     <MDBCol lg='4' md='12' className='mb-4'>
                         <Figure>

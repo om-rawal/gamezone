@@ -6,8 +6,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: "Audiowide", sans-serif;
-  background-repeat: repeat;
-  background-size: cover;
+  background-repeat:repeat-y;
+  background-size:100%;
   background-image: url(https://img.freepik.com/free-vector/futuristic-technological-background_79603-1097.jpg?w=1060&t=st=1658832362~exp=1658832962~hmac=9e40bbead8c3a78307d9b79ff3843f4f1307cda1540df4275ab61d01e6b92dd5);
 }
 
