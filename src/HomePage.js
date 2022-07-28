@@ -3,22 +3,25 @@ import { ListGroup} from "react-bootstrap";
 import Carousel from 'react-bootstrap/Carousel';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
+import 'bootstrap/dist/css/bootstrap.min.css'
+
+
 class HomePage extends React.Component {
     constructor() {
         super();
-        this.state = { finalList:['GTA V', 'CS: GO', 'Call of Duty'],
+        this.state = { finalList:[['GTA V','https://www.rockstargames.com/gta-v'], ['CS: GO','https://blog.counter-strike.net/'], ['Call of Duty','https://www.callofduty.com/']],
                         items:null,
     }
     
     }
     genreSelected(selectedGenre) {
         console.log('hit on genre selection');
-        var action = ['GTA V', 'CS: GO', 'Call of Duty'];
-        var adventure = ['GTA V', 'Minecraft'];
-        var arcade = ['Space Invaders', 'Packman', 'Donkey Kong'];
-        var puzzle = ['Sudoku', 'Minesweeper', 'Chess'];
-        var racing = ['Need For Speed', 'Asphalt', 'Forza'];
-        var shooting = ['CS: GO', 'Call of Duty', 'PUBG']
+        var action = [['GTA V','https://www.rockstargames.com/gta-v'], ['CS: GO','https://blog.counter-strike.net/'], ['Call of Duty','https://www.callofduty.com/']];
+        var adventure = [['GTA V','https://www.rockstargames.com/gta-v'], ['Minecraft','https://www.minecraft.net/']];
+        var arcade = [['Space Invaders','https://elgoog.im/space-invaders/'], ['Pacman','https://www.google.com/logos/2010/pacman10-i.html'], ['Donkey Kong','https://freekong.org/']];
+        var puzzle = [['Sudoku','https://sudoku.com/'], ['Minesweeper','https://minesweeper.online/'], ['Chess','https://www.chess.com/']];
+        var racing = [['Need For Speed','https://www.ea.com/games/need-for-speed'], ['Asphalt','https://asphaltlegends.com/'], ['Forza','https://forza.net/']];
+        var shooting = [['CS: GO','https://blog.counter-strike.net/'], ['Call of Duty','https://www.callofduty.com/'], ['PUBG','https://na.battlegrounds.pubg.com/']]
         if (selectedGenre === 'action') this.setState({ finalList: action });
         else if (selectedGenre === 'adventure') this.setState({ finalList: adventure });
         else if (selectedGenre === 'arcade') this.setState({ finalList: arcade });
@@ -28,10 +31,10 @@ class HomePage extends React.Component {
         else this.setState({ finalList: undefined });
         console.log(this.state.finalList);
         this.setState({items : this.state.finalList.map((word, idx) => {
-            return <ListGroup.Item style={{'width':'30%'}} variant="success"key={idx}>{word}</ListGroup.Item>
+            console.log("word is "+word);
+            return <ListGroup.Item style={{'width':'40%','color':'blue'}} variant="success"key={idx}><a target="_blank" rel="noreferrer" style={{'color':'blue'}} id='navlink' href={word[1]}>{word[0]}</a></ListGroup.Item>
         })});
     };
-
     render() {
         return (
             <div>
@@ -94,19 +97,22 @@ class HomePage extends React.Component {
                     <h2 style={{ 'display': 'inline' }}>Select the genre:</h2>&emsp;&emsp;
                     <DropdownButton style={{ 'display': 'inline' }} id="dropdown-basic-button" title="Genres">
 
-                        <Dropdown.Item onClick={() => this.genreSelected('action')}>Action</Dropdown.Item>
-                        <Dropdown.Item onClick={() => this.genreSelected('adventure')}>Adventure</Dropdown.Item>
-                        <Dropdown.Item onClick={() => this.genreSelected('arcade')}>Arcade</Dropdown.Item>
-                        <Dropdown.Item onClick={() => this.genreSelected('puzzle')}>Puzzle</Dropdown.Item>
-                        <Dropdown.Item onClick={() => this.genreSelected('racing')}>Racing</Dropdown.Item>
-                        <Dropdown.Item onClick={() => this.genreSelected('shooting')}>Shooting</Dropdown.Item>
+                        <Dropdown.Item onClick={() => console.log(this.genreSelected('action'))}>Action</Dropdown.Item>
+                        <Dropdown.Item onClick={() => console.log(this.genreSelected('adventure'))}>Adventure</Dropdown.Item>
+                        <Dropdown.Item onClick={() => console.log(this.genreSelected('arcade'))}>Arcade</Dropdown.Item>
+                        <Dropdown.Item onClick={() => console.log(this.genreSelected('puzzle'))}>Puzzle</Dropdown.Item>
+                        <Dropdown.Item onClick={() => console.log(this.genreSelected('racing'))}>Racing</Dropdown.Item>
+                        <Dropdown.Item onClick={() => console.log(this.genreSelected('shooting'))}>Shooting</Dropdown.Item>
                     </DropdownButton>
                 </div>
                 <div class="spaceleft20">
                     <hr/>
                     <ListGroup >
-                        <ListGroup.Item style={{'width':'30%'}} variant="primary">The Games of the selected genre are:</ListGroup.Item>
-                        {this.state.items}
+                        <ListGroup.Item style={{'width':'40%'}} variant="primary">The Games of the selected genre are:</ListGroup.Item>
+
+                        {
+                            this.state.items
+                        }
                         {/* <ListGroup.Item variant="primary">Primary</ListGroup.Item>
                         <ListGroup.Item variant="secondary">Secondary</ListGroup.Item>
                         <ListGroup.Item variant="success">Success</ListGroup.Item>

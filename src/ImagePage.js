@@ -1,5 +1,5 @@
 import { MDBRow, MDBCol } from "mdb-react-ui-kit";
-import React,{useState} from "react";
+import React from "react";
 import Figure from 'react-bootstrap/Figure'
 export default function ImagePage() {
     return (

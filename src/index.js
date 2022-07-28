@@ -50,6 +50,7 @@ const routing=(
       <Route path='/'element={<HomePage/>}></Route>
       <Route path='image'element={<ImagePage/>}></Route>
       <Route path='video'element={<VideoPage/>}></Route>
+
     </Routes>
 
   </BrowserRouter>
