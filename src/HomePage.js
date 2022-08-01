@@ -9,31 +9,61 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 class HomePage extends React.Component {
     constructor() {
         super();
-        this.state = { finalList:[['GTA V','https://www.rockstargames.com/gta-v'], ['CS: GO','https://blog.counter-strike.net/'], ['Call of Duty','https://www.callofduty.com/']],
+        this.state = { action : [['GTA V','https://www.rockstargames.com/gta-v'], ['CS: GO','https://blog.counter-strike.net/'], ['Call of Duty','https://www.callofduty.com/']],
+         adventure : [['GTA V','https://www.rockstargames.com/gta-v'], ['Minecraft','https://www.minecraft.net/']],
+         arcade : [['Space Invaders','https://elgoog.im/space-invaders/'], ['Pacman','https://www.google.com/logos/2010/pacman10-i.html'], ['Donkey Kong','https://freekong.org/']],
+         puzzle : [['Sudoku','https://sudoku.com/'], ['Minesweeper','https://minesweeper.online/'], ['Chess','https://www.chess.com/']],
+         racing : [['Need For Speed','https://www.ea.com/games/need-for-speed'], ['Asphalt','https://asphaltlegends.com/'], ['Forza','https://forza.net/']],
+         shooting : [['CS: GO','https://blog.counter-strike.net/'], ['Call of Duty','https://www.callofduty.com/'], ['PUBG','https://na.battlegrounds.pubg.com/']],
                         items:null,
     }
     
     }
     genreSelected(selectedGenre) {
         console.log('hit on genre selection');
-        var action = [['GTA V','https://www.rockstargames.com/gta-v'], ['CS: GO','https://blog.counter-strike.net/'], ['Call of Duty','https://www.callofduty.com/']];
-        var adventure = [['GTA V','https://www.rockstargames.com/gta-v'], ['Minecraft','https://www.minecraft.net/']];
-        var arcade = [['Space Invaders','https://elgoog.im/space-invaders/'], ['Pacman','https://www.google.com/logos/2010/pacman10-i.html'], ['Donkey Kong','https://freekong.org/']];
-        var puzzle = [['Sudoku','https://sudoku.com/'], ['Minesweeper','https://minesweeper.online/'], ['Chess','https://www.chess.com/']];
-        var racing = [['Need For Speed','https://www.ea.com/games/need-for-speed'], ['Asphalt','https://asphaltlegends.com/'], ['Forza','https://forza.net/']];
-        var shooting = [['CS: GO','https://blog.counter-strike.net/'], ['Call of Duty','https://www.callofduty.com/'], ['PUBG','https://na.battlegrounds.pubg.com/']]
-        if (selectedGenre === 'action') this.setState({ finalList: action });
-        else if (selectedGenre === 'adventure') this.setState({ finalList: adventure });
-        else if (selectedGenre === 'arcade') this.setState({ finalList: arcade });
-        else if (selectedGenre === 'puzzle') this.setState({ finalList: puzzle });
-        else if (selectedGenre === 'racing') this.setState({ finalList: racing });
-        else if (selectedGenre === 'shooting') this.setState({ finalList: shooting });
-        else this.setState({ finalList: undefined });
-        console.log(this.state.finalList);
-        this.setState({items : this.state.finalList.map((word, idx) => {
-            console.log("word is "+word);
-            return <ListGroup.Item style={{'width':'40%','color':'blue'}} variant="success"key={idx}><a target="_blank" rel="noreferrer" style={{'color':'blue'}} id='navlink' href={word[1]}>{word[0]}</a></ListGroup.Item>
-        })});
+        if (selectedGenre === 'action'){
+            this.setState({items : this.state.action.map((word, idx) => {
+                console.log("word is "+word);
+                return <ListGroup.Item style={{'width':'40%','color':'blue'}} variant="warning"key={idx}><a target="_blank" rel="noreferrer" style={{'color':'blue','textDecorationLine':'underline'}} id='navlink' href={word[1]}>{word[0]}</a></ListGroup.Item>
+            })});
+        } 
+        else if (selectedGenre === 'adventure'){
+            this.setState({items : this.state.adventure.map((word, idx) => {
+                console.log("word is "+word);
+                return <ListGroup.Item style={{'width':'40%','color':'blue'}} variant="success"key={idx}><a target="_blank" rel="noreferrer" style={{'color':'blue','textDecorationLine':'underline'}} id='navlink' href={word[1]}>{word[0]}</a></ListGroup.Item>
+            })});
+        } 
+        else if (selectedGenre === 'arcade'){
+            this.setState({items : this.state.arcade.map((word, idx) => {
+                console.log("word is "+word);
+                return <ListGroup.Item style={{'width':'40%','color':'blue'}} variant="secondary"key={idx}><a target="_blank" rel="noreferrer" style={{'color':'blue','textDecorationLine':'underline'}} id='navlink' href={word[1]}>{word[0]}</a></ListGroup.Item>
+            })});
+        } 
+        else if (selectedGenre === 'puzzle'){
+            this.setState({items : this.state.puzzle.map((word, idx) => {
+                console.log("word is "+word);
+                return <ListGroup.Item style={{'width':'40%','color':'blue'}} variant="info"key={idx}><a target="_blank" rel="noreferrer" style={{'color':'blue','textDecorationLine':'underline'}} id='navlink' href={word[1]}>{word[0]}</a></ListGroup.Item>
+            })});
+        } 
+        else if (selectedGenre === 'racing'){
+            this.setState({items : this.state.racing.map((word, idx) => {
+                console.log("word is "+word);
+                return <ListGroup.Item style={{'width':'40%','color':'blue'}} variant="dark"key={idx}><a target="_blank" rel="noreferrer" style={{'color':'blue','textDecorationLine':'underline'}} id='navlink' href={word[1]}>{word[0]}</a></ListGroup.Item>
+            })});
+        } 
+        else if (selectedGenre === 'shooting'){
+            this.setState({items : this.state.shooting.map((word, idx) => {
+                console.log("word is "+word);
+                return <ListGroup.Item style={{'width':'40%','color':'blue'}} variant="danger"key={idx}><a target="_blank" rel="noreferrer" style={{'color':'blue','textDecorationLine':'underline'}} id='navlink' href={word[1]}>{word[0]}</a></ListGroup.Item>
+            })});
+        } 
+        else {
+            this.setState({items : this.state.racing.map((word, idx) => {
+                console.log("word is "+word);
+                return <ListGroup.Item style={{'width':'40%','color':'blue'}} variant="dark"key={idx}><a target="_blank" rel="noreferrer" style={{'color':'blue','textDecorationLine':'underline'}} id='navlink' href={word[1]}>{word[0]}</a></ListGroup.Item>
+            })});
+        } 
+        
     };
     render() {
         return (
@@ -108,19 +138,11 @@ class HomePage extends React.Component {
                 <div class="spaceleft20">
                     <hr/>
                     <ListGroup >
-                        <ListGroup.Item style={{'width':'40%'}} variant="primary">The Games of the selected genre are:</ListGroup.Item>
+                        <ListGroup.Item style={{'width':'40%'}} variant="primary">The Games of the selected genre are: (Click the names to play)</ListGroup.Item>
 
                         {
                             this.state.items
                         }
-                        {/* <ListGroup.Item variant="primary">Primary</ListGroup.Item>
-                        <ListGroup.Item variant="secondary">Secondary</ListGroup.Item>
-                        <ListGroup.Item variant="success">Success</ListGroup.Item>
-                        <ListGroup.Item variant="danger">Danger</ListGroup.Item>
-                        <ListGroup.Item variant="warning">Warning</ListGroup.Item>
-                        <ListGroup.Item variant="info">Info</ListGroup.Item>
-                        <ListGroup.Item variant="light">Light</ListGroup.Item>
-                        <ListGroup.Item variant="dark">Dark</ListGroup.Item> */}
                     </ListGroup>
                 </div>
             </div>
